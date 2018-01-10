@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/following"
+            android:title="@string/people_follow"
+            android:icon="@drawable/gender_edit_icon"/>
+        <item
+            android:id="@+id/saved_menu"
+            android:title="@string/saved_post"
+            android:icon="@drawable/nav_saved_icon"/>
+        <item
+            android:id="@+id/archive_menu"
+            android:title="@string/archive_board"
+            android:icon="@drawable/nav_archieve_icon"/>
+        <item
+            android:id="@+id/block_menu"
+            android:title="@string/blocked"
+            android:icon="@drawable/nav_block_icon"/>
+        <item
+            android:id="@+id/setting"
+            android:title="@string/action_settings"
+            android:icon="@drawable/nav_setting_icon"/>
+        <item
+            android:id="@+id/logout_menu"
+            android:title="@string/logout"
+            android:icon="@drawable/nav_logout_icon"/>
+</menu>

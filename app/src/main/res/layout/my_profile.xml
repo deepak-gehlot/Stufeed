@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollDetective"
+    android:isScrollContainer="true"
+    android:background="@color/bg_color"
+    android:scrollbarThumbVertical="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="@color/bg_color"
+           android:orientation="vertical">
+
+           <!--first set(first my profile)-->
+           <include
+               android:id="@+id/icu"
+               layout="@layout/user_details"
+               android:visibility="visible" />
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/boardRcView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/icu"/>
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/postRcView"
+               android:layout_below="@+id/boardRcView"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:scrollbarThumbVertical="@android:color/transparent"
+               android:visibility="visible"
+               android:layout_alignParentBottom="true"/>
+
+
+       </RelativeLayout>
+   </ScrollView>

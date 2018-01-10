@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_5dp"
+        android:background="@color/common_color"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/attach_file"
+                android:layout_height="@dimen/dimen_70dp"
+                android:layout_width="@dimen/dimen_70dp"
+                app:civ_border_width="@dimen/dimen_5dp"
+                app:civ_border_color="@color/button_color"
+                android:src="@drawable/document_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_size_25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:text="@string/document"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/post_audio1"
+                android:layout_height="@dimen/dimen_70dp"
+                android:layout_width="@dimen/dimen_70dp"
+                android:src="@drawable/audio_icon"
+                app:civ_border_width="@dimen/dimen_5dp"
+                app:civ_border_color="@color/button_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_size_25dp"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:text="@string/audio"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/post_image"
+                android:layout_height="@dimen/dimen_70dp"
+                android:layout_width="@dimen/dimen_70dp"
+                app:civ_border_width="@dimen/dimen_5dp"
+                app:civ_border_color="@color/button_color"
+                android:src="@drawable/image_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_size_25dp"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:text="@string/images"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="@dimen/dimen_20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:visibility="gone"
+        android:layout_below="@+id/linearLayout">
+        <RelativeLayout
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/adsRelativeLayout">
+            <!--<com.google.android.gms.ads.AdView
+                android:id="@+id/attach_AdView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id"/>-->
+
+            <ProgressBar
+                android:id="@+id/attach_progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageButton
+            android:visibility="gone"
+            android:id="@+id/negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/holo_red_dark"/>
+        <ImageButton
+            android:id="@+id/positive"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/holo_red_dark"/>
+        <ImageButton
+            android:id="@+id/neutral"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="@android:color/holo_red_dark"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/share_feed_post"
+    android:visibility="gone"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <ListView
+        android:layout_alignParentTop="true"
+        android:id="@+id/singleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ListView
+        android:layout_below="@+id/singleItem"
+        android:id="@+id/board_list"
+        android:layout_above="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

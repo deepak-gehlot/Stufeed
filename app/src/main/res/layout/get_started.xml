@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/unVerifiedEmail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/relt"
+    android:gravity="center"
+    android:background="@color/common_color">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="@dimen/dimen_150dp"
+        android:layout_height="@dimen/dimen_150dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/ic_launcher_web"
+        android:id="@+id/imageView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:text="@string/verify_email_address_text"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dimen_20dp"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:paddingRight="@dimen/dimen_20dp"
+        android:paddingTop="@dimen/dimen_50dp"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/ads" />
+
+    <Button
+        android:id="@+id/retryBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Start"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:backgroundTint="@color/button_color"
+        android:textColor="@android:color/white"
+        android:paddingBottom="@dimen/dimen_20dp"
+        android:paddingTop="@dimen/dimen_20dp"
+        android:paddingLeft="@dimen/dimen_70dp"
+        android:paddingRight="@dimen/dimen_70dp"
+        android:layout_marginBottom="44dp"
+        android:layout_above="@+id/ads"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/ads"
+        android:background="@color/common_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/advertisement" />
+    </RelativeLayout>
+</RelativeLayout>

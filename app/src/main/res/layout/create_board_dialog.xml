@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/common_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/createBoard"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:text="@string/create_board"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/dimen_25dp"
+        android:textColor="@color/text_color"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:background="@color/text_color"/>
+
+    <EditText
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/darker_gray"
+        android:id="@+id/nameOfBoardEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.13"
+        android:padding="@dimen/dimen_5dp"
+        android:maxLength="25"
+        android:hint="@string/name_of_board"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/boardDescription"
+        android:gravity="top"
+        android:textSize="15sp"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/darker_gray"
+        android:padding="@dimen/dimen_5dp"
+        android:maxLength="75"
+        android:maxLines="2"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        android:layout_weight="0.19" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center|left"
+            android:padding="@dimen/dimen_5dp"
+            android:text="@string/protection"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/dimen_20dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:paddingRight="@dimen/dimen_10dp"
+            android:theme="@style/SwitchButtonColor"
+            android:layout_weight="1"
+            android:id="@+id/privacy"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.12"
+        android:gravity="top|center"
+        android:visibility="gone"
+        android:padding="@dimen/dimen_16dp"
+        android:text="@string/protection_label"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/dimen_16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/text_color"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dimen_16dp">
+
+        <Button
+            android:id="@+id/cancel_board"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="@color/button_color"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/done_board"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:backgroundTint="@color/button_color"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

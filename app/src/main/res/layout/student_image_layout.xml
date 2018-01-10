@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Take Photo"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Choose From Gallery"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/removeImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Remove Photo"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/img_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_5dp"
+        android:gravity="center"
+        android:padding="@dimen/dimen_10dp"
+        android:text="Cancel"
+        android:textSize="@dimen/dimen_16dp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            app:popupTheme="@style/AppTheme"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+<!--    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="46dp"
+        android:background="@color/colorPrimaryDark">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/card_view"
+            android:layout_margin="@dimen/dimen_5dp">
+            <EditText
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:id="@+id/searchCollege"
+                android:textSize="@dimen/dimen_16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:drawableRight="@drawable/search_icon"
+                android:hint="@string/enter_a_keyword"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color">
+                <requestFocus/>
+            </EditText>
+
+        </android.support.v7.widget.CardView>
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/college_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:layout_above="@+id/signUpPrgressBar"
+            android:layout_below="@+id/card_view">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/card_view"
+            android:orientation="vertical"
+            android:layout_above="@+id/signUpPrgressBar">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_20dp"
+                android:text="Select College"
+                android:orientation="vertical"
+                android:layout_below="@+id/search_college"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="You Select College:-"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_20dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/collegeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Select College"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_20dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/iDontFindIt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_alignBottom="@+id/proceedButton"
+                android:layout_alignTop="@+id/proceedButton"
+                android:layout_toLeftOf="@+id/proceedButton"
+                android:layout_toStartOf="@+id/proceedButton"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/dont_find"
+                android:textColor="@color/colorAccent"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_above="@+id/enterPin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_50dp"
+                android:layout_marginRight="@dimen/dimen_50dp"
+                android:gravity="center"
+                android:text="@string/collegeAffilaction"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/dimen_16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/enterPin"
+                android:layout_gravity="center"
+                android:layout_width="168dp"
+                android:hint="@string/optional"
+                android:textColorHint="@color/light_grey"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:maxLength="12"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/dimen_20dp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/proceedButton"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:text="@string/validate"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/button_color"
+                android:layout_above="@+id/signUpPrgressBar"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color"
+                android:text="OR"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/select_college"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/signUpPrgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/bg_color"
+            android:gravity="center">
+
+            <include layout="@layout/advertisement"/>
+        </RelativeLayout>
+
+    </RelativeLayout>-->
+    <RelativeLayout
+        android:layout_marginTop="46dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/card_view"
+            android:layout_margin="@dimen/dimen_5dp">
+
+            <EditText
+                android:id="@+id/upperEdit"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:textSize="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:drawableRight="@drawable/search_icon"
+                android:singleLine="true"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color"
+                android:focusable="true">
+                <requestFocus/>
+            </EditText>
+
+            <TextView
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:id="@+id/searchCollege"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:singleLine="true"
+                android:hint="@string/error_institute_name"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color">
+                <requestFocus/>
+            </TextView>
+
+        </android.support.v7.widget.CardView>
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/college_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:layout_above="@+id/signUpPrgressBar"
+            android:layout_below="@+id/card_view">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:background="@color/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/card_view"
+            android:orientation="vertical"
+            android:layout_above="@+id/signUpPrgressBar">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dimen_20dp"
+                android:text="Select College"
+                android:orientation="vertical"
+                android:layout_below="@+id/search_college"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_30dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="You Select College:-"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_20dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/collegeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:gravity="center|left"
+                    android:paddingLeft="10dp"
+                    android:text="Select College"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/dimen_20dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/iDontFindIt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_alignBottom="@+id/proceedButton"
+                android:layout_alignTop="@+id/proceedButton"
+                android:layout_toLeftOf="@+id/proceedButton"
+                android:layout_toStartOf="@+id/proceedButton"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/dont_find"
+                android:textColor="@color/colorAccent"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_above="@+id/enterPin"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:layout_marginLeft="@dimen/dimen_50dp"
+                android:layout_marginRight="@dimen/dimen_50dp"
+                android:gravity="center"
+                android:text="@string/collegeAffilaction"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/dimen_16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/enterPin"
+                android:layout_gravity="center"
+                android:layout_width="168dp"
+                android:hint="@string/optional"
+                android:textColorHint="@color/light_grey"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:ems="10"
+                android:maxLength="12"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/dimen_20dp"
+                android:textStyle="bold">
+            </EditText>
+            <Button
+                android:id="@+id/proceedButton"
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:text="@string/validate"
+                android:textStyle="bold"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/button_color"
+                android:layout_above="@+id/signUpPrgressBar"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color"
+                android:text="OR"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="@string/select_college"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/signUpPrgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/bg_color"
+            android:gravity="center">
+
+            <include layout="@layout/advertisement"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

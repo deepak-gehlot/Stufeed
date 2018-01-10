@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/bg_color"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="47dp">
+    <!--android:layout_marginTop="?attr/actionBarSize"-->
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/homeBtnNavigView"
+        android:layout_alignParentTop="true">
+
+        <!--My Profile-->
+        <RelativeLayout
+            android:id="@+id/myProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <include
+                layout="@layout/my_profile" />
+
+        </RelativeLayout>
+
+        <!--Connect-->
+        <RelativeLayout
+            android:id="@+id/connectivity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:visibility="gone">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/connectTL"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                app:tabMode="scrollable"
+                app:tabGravity="fill"
+                app:tabSelectedTextColor="#FA8072"
+                android:background="@android:color/white"
+                app:tabIndicatorColor="#FA8072"
+                app:tabTextColor="@color/text_color" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/connectPager"
+                android:background="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connectTL" />
+        </RelativeLayout>
+
+        <!--Create/Join Board-->
+        <RelativeLayout
+            android:id="@+id/board"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:visibility="gone">
+            <ScrollView
+                android:id="@+id/scroll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true">
+
+                <include layout="@layout/common_tab_layout_with_view_pager" />
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <!--Post-->
+        <RelativeLayout
+            android:id="@+id/postButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:visibility="gone">
+
+            <ScrollView
+                android:id="@+id/scroll2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:fillViewport="true">
+
+                <include layout="@layout/post_feed" />
+
+            </ScrollView>
+        </RelativeLayout>
+
+        <!--Feed Layout-->
+        <RelativeLayout
+            android:id="@+id/feedButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/feedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:divider="@android:color/black"
+                android:longClickable="true"
+                android:scrollbarThumbVertical="@android:color/transparent"
+                android:scrollbars="vertical" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+  <!--  <RelativeLayout
+        android:background="@color/colorAccent"
+        android:id="@+id/unVerifiedEmail"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relt">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/retryBtn"
+            android:gravity="center"
+            android:text="Please Verify Your Email And Press Retry Button"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/dimen_50dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/retryBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Retry" />
+    </RelativeLayout>-->
+
+  <!--  <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/relt"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true">
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>-->
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/homeBtnNavigView"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:itemTextColor="@drawable/clickable_icon_color"
+        app:itemIconTint="@drawable/clickable_icon_color"
+        android:backgroundTint="@color/common_color"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_navigation"
+        android:layout_above="@+id/footAdLay"/>
+
+    <RelativeLayout
+        android:id="@+id/footAdLay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <include layout="@layout/advertisement"/>
+    </RelativeLayout>
+</RelativeLayout>

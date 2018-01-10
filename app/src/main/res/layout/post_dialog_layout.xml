@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dimen_10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textSize="@dimen/dimen_20dp"
+        android:id="@+id/unfollow"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/nav_block_icon"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unfollow" />
+
+    <View
+        android:id="@+id/v1"
+        android:visibility="gone"
+        android:background="@color/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textSize="@dimen/dimen_20dp"
+        android:drawableLeft="@drawable/nav_block_icon"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/block" />
+
+    <View
+        android:id="@+id/v2"
+        android:visibility="gone"
+        android:background="@color/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textSize="@dimen/dimen_20dp"
+        android:drawableLeft="@drawable/flag_icon"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:id="@+id/hide_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hide_post" />
+
+    <View
+        android:id="@+id/v3"
+        android:visibility="gone"
+        android:background="@color/view_color"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:textSize="@dimen/dimen_20dp"
+        android:drawableLeft="@drawable/delete_icon"
+        android:drawablePadding="@dimen/dimen_10dp"
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete" />
+
+</LinearLayout>

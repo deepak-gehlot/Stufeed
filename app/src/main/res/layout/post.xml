@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/userData"
+        android:layout_marginTop="?actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editTextField"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:id="@+id/ediImage"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/postEditText"
+                    android:padding="@dimen/dimen_10dp"
+                    android:hint="Enter Text"
+                    android:gravity="top"
+                    android:textColor="@color/colorAccent"
+                    android:layout_alignParentTop="true"
+                    android:paddingBottom="@dimen/dimen_5dp"
+                    android:layout_above="@+id/holderView" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/holderView"
+                    android:layout_above="@+id/imageFooter"/>
+                <RelativeLayout
+                    android:layout_marginBottom="@dimen/dimen_50dp"
+                    android:layout_alignParentBottom="true"
+                    android:id="@+id/imageFooter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/imageRL"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                        <ImageView
+                            android:id="@+id/cancelImg"
+                            android:visibility="visible"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+                        <ImageView
+                            android:id="@+id/postImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_launcher_web"/>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:id="@+id/musicText"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:id="@+id/startStopImg"
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="50dp"
+                            android:layout_weight="2"
+                            android:src="@drawable/ic_launcher_web"/>
+
+                        <TextView
+                            android:lines="2"
+                            android:id="@+id/audioText"
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="9"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/documentLayout"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+                        <ImageView
+                            android:id="@+id/documentImg"
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"/>
+
+                        <TextView
+                            android:id="@+id/documentPath"
+                            android:layout_width="@dimen/dimen_0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="9"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+        <Button
+            android:drawableLeft="@drawable/attachment_icon"
+            android:id="@+id/attachButton"
+            android:paddingLeft="@dimen/dimen_18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/view3"
+            android:layout_alignParentBottom="true" />
+
+
+        <FrameLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:id="@+id/shareFrameContent"/>
+    </RelativeLayout>
+
+    <include layout="@layout/select_board_share_feed"/>
+
+</android.support.design.widget.CoordinatorLayout>

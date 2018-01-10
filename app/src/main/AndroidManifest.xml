@@ -1,0 +1,125 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.stufeed">
+
+    <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Splash"
+            android:screenOrientation="userPortrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Home"
+            android:label="@string/you"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.CollegeApproval"
+            android:label="@string/collegeApproval"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.GetStarted"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Login"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Register"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.FollowerFollowing"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.UserView"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Post"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Notifiy"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.EditProfile"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".pro.Home"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.GetFeed"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.JoinBoards"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Setting"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.SavePost"
+            android:theme="@style/AppTheme.NoActionBar">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>-->
+        </activity>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Comment"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.ViewBoard"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Archive"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:screenOrientation="userPortrait"
+            android:name=".pro.Blocked"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+        android:screenOrientation="userPortrait"
+        android:name=".pro.UserSearch"
+        android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:parentActivityName=".pro.Login"
+            android:screenOrientation="userPortrait"
+            android:name=".pro.InstituteRegistration"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <service
+            android:name=".utility.services.ExampleService"
+            android:exported="true"
+            android:enabled="true">
+        </service>
+        <receiver android:name=".utility.boardcast.SowmitrasReceiver"/>
+
+    </application>
+</manifest>

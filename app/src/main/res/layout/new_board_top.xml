@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ImageView
+        android:id="@+id/lockImg"
+        android:visibility="visible"
+        android:layout_width="18dp"
+        android:layout_height="12dp"
+        app:srcCompat="@android:drawable/ic_lock_lock"
+        tools:layout_editor_absoluteX="3dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/edit_textview"
+        android:layout_width="18dp"
+        android:layout_height="12dp"
+        android:src="@drawable/nav_setting_icon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

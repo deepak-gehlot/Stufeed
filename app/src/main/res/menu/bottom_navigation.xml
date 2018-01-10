@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/you"
+        android:icon="@drawable/you_icon"
+        android:title="@string/you" />
+    <item
+        android:id="@+id/connect"
+        android:icon="@drawable/connect_icon"
+        android:title="@string/connect" />
+
+    <item
+        android:id="@+id/postButton"
+        android:title="@string/nav_post"
+        android:icon="@drawable/add_icon"
+        app:showAsAction="collapseActionView"/>
+
+    <item
+        android:id="@+id/board"
+        android:icon="@drawable/board_icon"
+        android:title="@string/board" />
+
+    <item
+        android:id="@+id/feed"
+        android:icon="@drawable/feed_icon"
+        android:title="@string/feed" />
+</menu>
+
+    <!--android:icon="@drawable/ic_launcher_web"-->

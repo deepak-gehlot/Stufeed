@@ -1,0 +1,57 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+        "institutes":{
+          ".indexOn":["college_name","address","affiliation_no","college_name","college_type","district","location","management" ,"programs" ,"specialised_in" ,"state" ,"university_name","university_type","upload_year","website","year_of_establishment"]
+        }, 
+          "accounts":{
+            ".indexOn":["contact", "email", "role" ,"username","college","cg_id"]
+      	},
+          "boards":{
+            ".indexOn":["board_name", "board_description", "total_post","total_follower","board_key","created_by"]
+        },
+          "posts":{
+        		".indexOn":["post_like","post_by","post_comments","post_media_link","post_privacy","post_text","post_time","post_user_image","post_within_board","post_type","post_reference_key", "post_view"]
+        },
+          "likesAndSave" :{
+              ".indexOn":["name", "like", "ref_key", "like_key", "name_key"]
+            },
+        "userslist":{
+          "$username":{
+              ".indexOn":["aboutStatus","birthday","branch","college","contact","email","gender","graduationYear","name","program","role","userimage"]
+        			}
+        },
+          "board_join_request":{
+            "$user":{
+              "$kry":{
+                "$userId":{
+                 ".indexOn":["boardNameBJR", "timeBJR", "userRequestBJR", "useruid"] 
+                }
+              }
+            }
+          },
+          "following":{
+            "$user":{
+              "$kry":{
+              ".indexOn":["user_id"]
+            	}
+            }
+          },
+            "branchs":{
+              ".indexOn":["branch"]
+            },
+              "follower":{
+            "$user":{
+              "$kry":{
+              ".indexOn":["user"]
+            	}
+            }
+          },
+            "postview" :{
+        "$tg":{
+          ".indexOn" :["viewed"]
+        }
+      }
+  }
+}

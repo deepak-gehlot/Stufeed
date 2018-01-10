@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/edit_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:popupTheme="@style/AppTheme"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_marginTop="46dp">
+        <!--tools:context="com.sowmitras.networks.EditUserDetails"-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color"
+                android:gravity="center"
+                android:id="@+id/relativeLayout">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView1"
+                    android:backgroundTint="@color/common_color"
+                    android:layout_margin="@dimen/dimen_10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@color/common_color"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardPreventCornerOverlap="true"
+                            android:id="@+id/cv"
+                            app:cardCornerRadius="@dimen/dimen_50dp">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/studentImg"
+                                android:layout_width="@dimen/dimen_100dp"
+                                android:layout_height="@dimen/dimen_100dp"
+                                android:src="@drawable/ic_launcher_web" />
+                        </android.support.v7.widget.CardView>
+
+                        <EditText
+                            android:id="@+id/userNameEdt"
+                            android:hint="Full Name"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:singleLine="true"
+                            android:layout_below="@id/cardView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:drawableLeft="@drawable/person_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"/>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoComplete1"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:layout_width="match_parent"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:layout_height="@dimen/dimen_50dp" />
+
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoComplete2"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:layout_below="@id/autoComplete1"
+                            android:layout_width="match_parent"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_height="@dimen/dimen_50dp" />
+
+                        <EditText
+                            android:id="@+id/graduationYearText"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50dp"
+                            android:gravity="center|left"
+                            android:focusable="false"
+                            android:singleLine="true"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:layout_below="@id/autoComplete2"
+                            android:focusableInTouchMode="false"
+                            android:cursorVisible="false"
+                            android:drawableLeft="@drawable/graducation_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:hint="@string/join_year"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"/>
+
+                        <TextView
+                            android:id="@+id/collegeText"
+                            android:hint="@string/college"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:layout_marginLeft="3dp"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:layout_below="@id/graduationYearText"
+                            android:drawableLeft="@drawable/college_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp" />
+
+                        <View
+                            android:layout_below="@+id/collegeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:id="@+id/view2"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:background="@color/view_color"/>
+
+                        <EditText
+                            android:id="@+id/aboutStatusEdt"
+                            android:hint="@string/about_status"
+                            android:drawableLeft="@drawable/about_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:maxLength="150"
+                            android:gravity="left"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:singleLine="true"
+                            android:scrollbars="horizontal"
+                            android:layout_below="@id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_60dp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardView1"
+                    android:id="@+id/cardView2"
+                    android:backgroundTint="@color/common_color"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/dimen_10dp"
+                        android:background="@color/common_color"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:padding="@dimen/dimen_10dp"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:text="@string/general_information"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:id="@+id/selectGender"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:cursorVisible="false"
+                            android:gravity="center|left"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:drawableRight="@drawable/forward_arrow"
+                            android:hint="@string/gender"
+                            android:drawableLeft="@drawable/gender_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50dp" />
+
+                        <EditText
+                            android:id="@+id/mobileEdt"
+                            android:hint="@string/contact"
+                            android:inputType="number"
+                            android:layout_below="@+id/selectGender"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:maxLength="12"
+                            android:layout_width="match_parent"
+                            android:drawableLeft="@drawable/mobile_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_height="@dimen/dimen_50dp"  />
+
+                        <TextView
+                            android:id="@+id/emailEdt"
+                            android:gravity="center|left"
+                            android:layout_below="@+id/mobileEdt"
+                            android:hint="@string/enter_email"
+                            android:singleLine="true"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:background="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:drawableLeft="@drawable/email_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:layout_height="40dp" />
+
+                        <View
+                            android:layout_below="@+id/emailEdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:background="@color/view_color"/>
+
+                        <EditText
+                            android:id="@+id/birthdayTxt"
+                            android:gravity="center|left"
+                            android:drawableRight="@drawable/forward_arrow"
+                            android:hint="@string/birthday"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:focusable="false"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:drawableLeft="@drawable/birthday_edit_icon"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:singleLine="true"
+                            android:focusableInTouchMode="false"
+                            android:cursorVisible="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_50dp" />
+
+                        <TextView
+                            android:id="@+id/changePasswordText"
+                            android:gravity="center|left"
+                            android:layout_below="@id/birthdayTxt"
+                            android:drawableRight="@drawable/forward_arrow"
+                            android:text="@string/change_password"
+                            android:textColor="@color/text_color"
+                            android:textColorHint="@color/text_hint_color"
+                            android:singleLine="true"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:textSize="@dimen/dimen_14sp"
+                            android:drawablePadding="@dimen/dimen_10dp"
+                            android:drawableLeft="@drawable/pass_change_edit_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"/>
+
+                        <View
+                            android:layout_below="@+id/changePasswordText"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginRight="@dimen/dimen_5dp"
+                            android:layout_marginLeft="@dimen/dimen_5dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:background="@color/view_color"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
